@@ -46,15 +46,19 @@ const dateClock = setInterval(function todayTime() {
 
 
 //BACKGROUND SELECTORs
+
 const degreeRange = document.getElementById('degreeRange');
 const color1 = document.getElementById('color1');
 const color2 = document.getElementById('color2');
+const gradientBox = document.getElementById('gradientBox');
+const degreeText = document.getElementById('degreeText');
 
 function updateGradientBackground() {
   const degree = degreeRange.value;
   const colorStart = color1.value;
   const colorEnd = color2.value;
   document.body.style.background = `linear-gradient(${degree}deg, ${colorStart}, ${colorEnd})`;
+  degreeText.textContent = `Degree: ${degree}°`;
 }
 
 degreeRange.addEventListener('input', updateGradientBackground);
@@ -63,6 +67,4 @@ color2.addEventListener('input', updateGradientBackground);
 
 // Initialize the gradient background on page load
 updateGradientBackground();
-
-
 

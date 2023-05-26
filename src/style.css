@@ -97,8 +97,12 @@ body {
     box-shadow: 0 8px 10px rgba(0, 0, 0, .5);
 }
 
-.bg_customizer{
+.bg_customizer {
     width: 100%;
     border: none;
     margin: 5px;
+}
+
+#degreeText {
+    text-align: center;
 }
