@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="src/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <title>DIGITAL O'CLOCK</title>
+</head>
+
+<body>
+    <div id="dateTime">
+        <div id="clock">
+            <div>
+                <span id="hour">00</span>
+                <span class="desc" id="hour_desc">Hours</span>
+            </div>
+            <div>
+                <span id="minute">00</span>
+                <span class="desc" id="minute_desc">Minutes</span>
+            </div>
+            <div>
+                <span id="second">00</span>
+                <span class="desc" id="second_desc">Seconds</span>
+            </div>
+        </div>
+        <div id="date">
+            <div>
+                <span id="today">dd-MM-year</span>
+            </div>
+        </div>
+    </div>
+
+    <div id="bg_selector">
+        <span>Customize the Background</span>
+        <input type="range" id="degreeRange" class="bg_customizer" min="0" max="360" step="1">
+        <input type="color" id="color1" class="bg_customizer">
+        <input type="color" id="color2" class="bg_customizer">
+        <div id="gradientBox"></div>
+
+    </div>
+
+    <div id="author">
+        <a target="_blank" href="https://github.com/sastelvios">
+            <i class="fab fa-github"></i>
+            Sastelvio Serafim MANUEL
+        </a>
+    </div>
+
+    <script src="src/motion.js"></script>
+</body>
+
+</html>

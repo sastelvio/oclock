@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+}
+
+body {
+    height: 100vh;
+    background: linear-gradient(120deg, #45ac00d8, #002400da);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#dateTime {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 400px;
+    width: 900px;
+    background: transparent;
+    border-radius: 5px;
+    box-shadow: 0 8px 10px rgba(0, 0, 0, .5);
+}
+
+#clock {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 85%;
+    width: 100%;
+    background: transparent;
+}
+
+#date {
+    margin: 10px;
+    font-size: 17px;
+    font-weight: bolder;
+    background: transparent;
+    color: #fff;
+}
+
+#clock div {
+    height: 80%;
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    background: rgba(5, 5, 5, .9);
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, .7);
+    border-radius: 7px;
+    letter-spacing: 3px;
+}
+
+#clock span {
+    font-weight: bolder;
+    font-size: 80px;
+}
+
+#clock span.desc {
+    font-size: 15px;
+    font-weight: normal;
+}
+
+#author {
+    margin: 25px;
+}
+
+#author a {
+    font-size: 15px;
+    color: #fff;
+    text-decoration: none;
+}
+
+#author a:hover {
+    color: #0056b3;
+}
+
+#bg_selector {
+    position: absolute;
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    top: 10px;
+    left: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 250px;
+    background: transparent;
+    border-radius: 5px;
+    box-shadow: 0 8px 10px rgba(0, 0, 0, .5);
+}
+
+.bg_customizer{
+    width: 100%;
+    border: none;
+    margin: 5px;
+}
