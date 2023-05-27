@@ -13,11 +13,6 @@ A project made using HTML, CSS and JS to show the time in your system. has a bag
 - [Demo](#demo)
 - [License](#license)
 
-## Installation
-
-External resorucees used:
-- [Open Sans](https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500&display=swap){:target="_blank"}
-
 ## Usage
 
 Double-click the index.html file
