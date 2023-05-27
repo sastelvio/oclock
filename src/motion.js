@@ -9,9 +9,16 @@ window.addEventListener('load', function () {
   if (checkbox.checked) {
     analogClock.style.display = 'flex';
     digitalClock.style.display = 'none';
+
+    analogClock.classList.remove('hidden');
+    digitalClock.classList.add('hidden');
+
   } else {
     analogClock.style.display = 'none';
     digitalClock.style.display = 'flex';
+
+    analogClock.classList.add('hidden');
+    digitalClock.classList.remove('hidden');
   }
 
   // Add event listener to checkbox change
