@@ -15,8 +15,15 @@ body {
     justify-content: center;
 }
 
-#dateTime {
+#oclock {
     display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.container_clock {
+    /*display: flex;*/
     flex-direction: column;
     align-items: center;
     height: 400px;
@@ -26,7 +33,17 @@ body {
     box-shadow: 0 8px 10px rgba(0, 0, 0, .5);
 }
 
-#clock {
+.date {
+    margin: 10px;
+    font-size: 17px;
+    font-weight: bolder;
+    background: transparent;
+    color: #fff;
+}
+
+
+/*DIGITAL*/
+#time_d {
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -35,15 +52,7 @@ body {
     background: transparent;
 }
 
-#date {
-    margin: 10px;
-    font-size: 17px;
-    font-weight: bolder;
-    background: transparent;
-    color: #fff;
-}
-
-#clock div {
+#time_d div {
     height: 80%;
     width: 25%;
     display: flex;
@@ -57,15 +66,146 @@ body {
     letter-spacing: 3px;
 }
 
-#clock span {
+#time_d span {
     font-weight: bolder;
     font-size: 80px;
 }
 
-#clock span.desc {
+#time_d span.desc {
     font-size: 15px;
     font-weight: normal;
 }
+
+
+/*FIM DIGITAL*/
+/*ANALOGICO*/
+
+#time_a {
+    margin-top: 16px;
+    width: 310px;
+    height: 310px;
+    position: relative;
+    border: 7px solid rgba(5, 5, 5, .9);
+    box-shadow: -4px -4px 10px rgba(67,67,67,0.5),
+                  inset 4px 4px 10px rgba(0,0,0,0.5),
+                  inset -4px -4px 10px rgba(67,67,67,0.5),
+                  4px 4px 10px rgba(0,0,0,0.3);
+    border-radius: 50%;
+}
+.outer_clock_face {
+    position: relative;
+    background: rgba(5, 5, 5, 1);
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+  }
+  
+  .outer_clock_face::after {
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    transform: rotate(90deg)
+  }
+  
+  .outer_clock_face::after,
+  .outer_clock_face::before,
+  .outer_clock_face .marking{
+    content: '';
+    position: absolute;
+    width: 5px;
+    height: 100%;
+    background: #0668b8;
+    z-index: 0;
+    left: 49%;
+  }
+  .outer_clock_face .marking {
+    background: #bdbdcb;
+    width: 3px;
+  }
+  
+  .outer_clock_face .marking.marking_one {
+    -webkit-transform: rotate(30deg);
+    -moz-transform: rotate(30deg);
+    transform: rotate(30deg)
+  }
+  
+  .outer_clock_face .marking.marking_two {
+    -webkit-transform: rotate(60deg);
+    -moz-transform: rotate(60deg);
+    transform: rotate(60deg)
+  }
+  
+  .outer_clock_face .marking.marking_three {
+    -webkit-transform: rotate(120deg);
+    -moz-transform: rotate(120deg);
+    transform: rotate(120deg)
+  }
+  
+  .outer_clock_face .marking.marking_four {
+    -webkit-transform: rotate(150deg);
+    -moz-transform: rotate(150deg);
+    transform: rotate(150deg)
+  }
+
+  .inner_clock_face {
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    width: 80%;
+    height: 80%;
+    background: rgba(5, 5, 5, 1);
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    border-radius: 100%;
+    z-index: 1;
+  }
+  
+  .inner_clock_face::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 16px;
+    height: 16px;
+    border-radius: 18px;
+    margin-left: -9px;
+    margin-top: -6px;
+    background: #4d4b63;
+    z-index: 11;
+  }
+  
+  .hand {
+    width: 50%;
+    right: 50%;
+    height: 6px;
+    background: #61afff;
+    position: absolute;
+    top: 50%;
+    border-radius: 6px;
+    transform-origin: 100%;
+    transform: rotate(90deg);
+    transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
+  }
+  
+  .hand.hour_hand {
+    width: 30%;
+    z-index: 3;
+  }
+  
+  .hand.min_hand {
+    height: 3px;
+    z-index: 10;
+    width: 40%;
+  }
+  
+  .hand.second_hand {
+    background: #e46600;
+    width: 45%;
+    height: 2px;
+  }
+  
+/*FIM ANALOGICO*/
+
 
 #author {
     margin: 25px;
@@ -105,4 +245,98 @@ body {
 
 #degreeText {
     text-align: center;
+}
+
+
+#toggle_button {
+    margin: 30px;
+}
+
+.btn-clock-mode-switch label {
+    font-size: 13px;
+    color: #424242;
+    font-weight: 500;
+}
+
+.btn-clock-mode-switch {
+    display: inline-block;
+    margin: 0px;
+    position: relative;
+}
+
+.btn-clock-mode-switch>label.btn-clock-mode-switch-inner {
+    margin: 0px;
+    width: 140px;
+    height: 30px;
+    background: #E0E0E0;
+    border-radius: 26px;
+    overflow: hidden;
+    position: relative;
+    transition: all 0.3s ease;
+    /*box-shadow: 0px 0px 8px 0px rgba(17, 17, 17, 0.34) inset;*/
+    display: block;
+}
+
+.btn-clock-mode-switch>label.btn-clock-mode-switch-inner:before {
+    content: attr(data-on);
+    position: absolute;
+    font-size: 12px;
+    font-weight: 500;
+    top: 7px;
+    right: 20px;
+
+}
+
+.btn-clock-mode-switch>label.btn-clock-mode-switch-inner:after {
+    content: attr(data-off);
+    width: 70px;
+    height: 16px;
+    background: #fff;
+    border-radius: 26px;
+    position: absolute;
+    left: 2px;
+    top: 2px;
+    text-align: center;
+    transition: all 0.3s ease;
+    box-shadow: 0px 0px 6px -2px #111;
+    padding: 5px 0px;
+}
+
+.btn-clock-mode-switch>.alert {
+    display: none;
+    background: #FF9800;
+    border: none;
+    color: #fff;
+}
+
+.btn-clock-mode-switch input[type="checkbox"] {
+    cursor: pointer;
+    width: 50px;
+    height: 25px;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    z-index: 1;
+    margin: 0px;
+}
+
+.btn-clock-mode-switch input[type="checkbox"]:checked+label.btn-clock-mode-switch-inner {
+    background: #151515;
+    color: #fff;
+}
+
+.btn-clock-mode-switch input[type="checkbox"]:checked+label.btn-clock-mode-switch-inner:after {
+    content: attr(data-on);
+    left: 68px;
+    background: #3c3c3c;
+}
+
+.btn-clock-mode-switch input[type="checkbox"]:checked+label.btn-clock-mode-switch-inner:before {
+    content: attr(data-off);
+    right: auto;
+    left: 20px;
+}
+
+.btn-clock-mode-switch input[type="checkbox"]:checked~.alert {
+    display: block;
 }

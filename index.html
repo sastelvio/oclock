@@ -7,31 +7,62 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="src/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
-    <title>DIGITAL O'CLOCK</title>
+    <title>O'CLOCK</title>
 </head>
 
 <body>
-    <div id="dateTime">
-        <div id="clock">
-            <div>
-                <span id="hour">00</span>
-                <span class="desc" id="hour_desc">Hours</span>
+    <div id="oclock">
+        <div id="digital" class="container_clock">
+            <div id="time_d">
+                <div>
+                    <span id="hour">00</span>
+                    <span class="desc" id="hour_desc">Hours</span>
+                </div>
+                <div>
+                    <span id="minute">00</span>
+                    <span class="desc" id="minute_desc">Minutes</span>
+                </div>
+                <div>
+                    <span id="second">00</span>
+                    <span class="desc" id="second_desc">Seconds</span>
+                </div>
             </div>
-            <div>
-                <span id="minute">00</span>
-                <span class="desc" id="minute_desc">Minutes</span>
-            </div>
-            <div>
-                <span id="second">00</span>
-                <span class="desc" id="second_desc">Seconds</span>
+            <div class="date">
+                <div>
+                    <span id="today_d">dd-MM-year</span>
+                </div>
             </div>
         </div>
-        <div id="date">
-            <div>
-                <span id="today">dd-MM-year</span>
+        <div id="analogic" class="container_clock">
+            <div id="time_a">
+                <div class="outer_clock_face">
+                    <div class="marking marking_one"></div>
+                    <div class="marking marking_two"></div>
+                    <div class="marking marking_three"></div>
+                    <div class="marking marking_four"></div>
+                    <div class="inner_clock_face">
+                        <div class="hand hour_hand"></div>
+                        <div class="hand min_hand"></div>
+                        <div class="hand second_hand"></div>
+                    </div>
+
+                </div>
             </div>
+            <div class="date">
+                <div>
+                    <span id="today_a">dd-MM-year</span>
+                </div>
+            </div>
+        </div>
+        <div id="toggle_button">
+            <label class="switch btn-clock-mode-switch">
+                <input type="checkbox" name="clock_mode" id="clock_mode" value="1">
+                <label for="clock_mode" data-on="Analogic" data-off="Digital"
+                    class="btn-clock-mode-switch-inner"></label>
+            </label>
         </div>
     </div>
+
 
     <div id="bg_selector">
         <span>Customize the Background</span>
@@ -44,7 +75,7 @@
     </div>
 
     <div id="author">
-        <a target="_blank" href="https://github.com/sastelvios">
+        <a target="_blank" href="https://github.com/sastelvios" rel="noreferrer">
             <i class="fab fa-github"></i>
             Sastelvio Serafim MANUEL
         </a>
