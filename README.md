@@ -19,13 +19,13 @@ Double-click the index.html file
 
 ## Demo
 
-![Project Demo](./images/demo.png)
+### Digital
+![Digital](./src/preview/digital.png)
 
-[Add any relevant images or screenshots of your project here. You can store them in the `images` folder.]
+### Analogic
+![Analigic](./src/preview/analogic.png)
 
 ## License
 
-[Specify the license under which your project is distributed. For example, MIT, Apache, etc.]
-
-[Add any other sections or information that you think would be helpful for users to understand or contribute to your project.]
+MIT License
 
