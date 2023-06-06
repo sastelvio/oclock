@@ -4,7 +4,7 @@ OCLOCK
 
 ## Description
 
-A project made using HTML, CSS and JS to show the time in your system. has a baground color selector.
+A project made using HTML, CSS and JS to show the time in your system. has a background color selector.
 
 ## Table of Contents
 
